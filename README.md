@@ -32,7 +32,7 @@ To install in Linux desktop environment:
 
 Install in Termux
 
-Install Termux from Play Store -> https://play.google.com/store/apps/details?id=com.termux&hl=es_419&gl=US
+Install Termux from Play Store -> https://play.google.com/store/apps/details?id=com.termux&hl=es_419&gl=US .
 Go tu Termux and run these steps.
 
 `apt update && apt upgrade`
