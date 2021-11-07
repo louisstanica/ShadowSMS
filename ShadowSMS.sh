@@ -23,6 +23,10 @@ Requirements(){
 	if [ ! -x ${BIN}/curl ]; then
 		${APT} install curl -y
 	fi
+	if [ ! -x ${BIN}/figlet ]; then
+                ${APT} install figlet -y
+        fi
+
 	if [ ! -x ${BIN}/ShadowSMS ]; then
 		echo "#!/bin/bash" >> ${BIN}/ShadowSMS
 		echo "ShadowSMS='${PWD}'" >> ${BIN}/ShadowSMS
