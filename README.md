@@ -29,10 +29,9 @@ To install in Linux desktop environment:
 
 `bash ShadowSMS.sh`
 
+--------------------------
 
-To install in Termux
-
------------------
+To install in Termux:
 
 Install Termux from Play Store -> https://play.google.com/store/apps/details?id=com.termux&hl=es_419&gl=US 
 
