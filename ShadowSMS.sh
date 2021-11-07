@@ -1,9 +1,9 @@
 #!/bin/bash
 
 #
-# ┌-----------┐  ┌------------┐
-# █ ShadowSMS █=>█ 06/11/2021 █
-# └-----------┘  └------------┘
+#   ┌-----------┐
+#   | ShadowSMS |
+#   └-----------┘
 #
 
 #VARIABLES
@@ -11,23 +11,7 @@
 PWD=$(pwd)
 SYSTEM=$(uname -o)
 
-negro="\e[1;30m"
-azul="\e[1;34m"
-verde="\e[1;32m"
-cian="\e[1;36m"
-rojo="\e[1;31m"
-purpura="\e[1;35m"
-amarillo="\e[1;33m"
-blanco="\e[1;37m"
 
-black="\e[0;30m"
-blue="\e[0;34m"
-green="\e[0;32m"
-cyan="\e[0;36m"
-red="\e[0;31m"
-purple="\e[0;35m"
-yellow="\e[0;33m"
-white="\e[0;37m"
 Requirements(){
 	if [ "${SYSTEM}" == "Android" ]; then
 		APT="pkg"
@@ -53,56 +37,43 @@ Requirements(){
 ShadowSMS(){
 	sleep 0.5
 	clear
-echo -e "${negro}
-MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-MMMMMMMMMMMMMMMMMMMMMMMMMMMMNNNMMMMMMMMMNmNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNmNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNNNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNNMMMMMMMMMMMMMMMMMMMMMMMMMM
-MMMMMMMMMMMMMMMMMMMMMMMMNy+::-::/+yNMMMM/.sMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMy.:MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMmy+::-::/oyMMMMMy+++mMMMMMMMMm+++sMMMMMNho/:-:::+smMMMMMMMMMMMMMMMMMMMMM
-MMMMMMMMMMMMMMMMMMMMMMMy. :syhhys/-mMMMM: oMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMs -MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMs  :syhhys/-NMMMM/   -NMMMMMMM:   -MMMMm: .oyhhhs+:sMMMMMMMMMMMMMMMMMMMMM
-MMMMMMMMMMMMMMMMMMMMMMN  +MMMMMMMMMMMMMM: oMNhyshmNMMMMMMNmhyyyhdNMMMMMMMMMmhyyhmMs -MMMMMMNmhysydNMMMMMNmmMMMMMNmmNMMMMMNmNMMN  oMMMMMMMMMMMMMM/ :o +MMMMMMs /+ -MMMM/ .NMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-MMMMMMMMMMMMMMMMMMMMMMN  /NMMMMMMMMMMMMM: /+-/+/- -dMMMMM:.:+++: .+NMMMMMd: ./+/-:+ -MMMMMy- -++/. /mMMMd  mMMMMo  -MMMMM- sMMN  +NMMMMMMMMMMMMM/ :N- hMMMMd .N+ -MMMM/ .mMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-MMMMMMMMMMMMMMMMMMMMMMMh.  :+oyhNMMMMMMM:  yMMMMMo .MMMMMNMMMMMMN+ :MMMMd  yMMMMMs  -MMMMo  dMMMMNo  dMMM/ +MMMN .: hMMMy .NMMMy  .:+sydNMMMMMMM/ :Mm  mMMN. dM+ -MMMMm:  -/oshmMMMMMMMMMMMMMMMMMMMMMMMM
-MMMMMMMMMMMMMMMMMMMMMMMMMds+:-   .+NMMMM: +MMMMMMN  dMMMMMMdhyssso  NMMM: +MMMMMMM/ -MMMN  yMMMMMMM: /MMMd  mMM+ sm -MMM. sMMMMMMhs/:-   .oNMMMM/ :MMy :MM/ sMM+ -MMMMMMmy+/-.   /dMMMMMMMMMMMMMMMMMMMMM
-MMMMMMMMMMMMMMMMMMMMM/:::::::::-    ::::  .:::::::  -:::::          ::::  .:::::::.  :::-  ::::::::.  ::::  .::  ::  ::-  :::::::::::::-   .::::   :::  -:  :::.  :::::::::::::    ::NMMMMMMMMMMMMMMMMMM
-MMMMMMMMMMMMMMMMMMMMMmddddddddddds  sddd- +ddddddd  yddd. +dddddds  hddd- :ddddddd: .dddh  oddddddd- :ddddh  y: oddh .d  sdddddddddddddddo  yddd: -dddd.   dddd/ -ddddddddddddddd  :dMMMMMMMMMMMMMMMMMMM
-MMMMMMMMMMMMMMMMMMMMMMMydNMMMMMMm:  mMMM: oMMMMMMM  dMMM- oMMMMMd-  mMMMh  yMMMMMy  -MMMM+ .dMMMMMo  dMMMMM/ : .MMMM/ / .NMMMMNymNMMMMMMd- .NMMM/ :MMMMdoodMMMM+ -MMMMhdNMMMMMMNo  yMMMMMMMMMMMMMMMMMMMM
-MMMMMMMMMMMMMMMMMMMMMMM-..-://:-  /dMMMM: oMMMMMMM  dMMMd- -+o+::o  mMMMMh: -+o+::+ -MMMMMs- :oo+- :dMMMMMMm   yMMMMm   yMMMMMN...-///:. ./mMMMM/ :MMMMMMMMMMMM+ -MMMM+. .:///-. -yMMMMMMMMMMMMMMMMMMMMM
-MMMMMMMMMMMMMMMMMMMMMMMNmdyssosydmMMMMMMhymMMMMMMMyyNMMMMNdyssydNNyyNMMMMMNdyssydNmyhMMMMMMNdysoshmMMMMMMMMMhyyNMMMMMhyyMMMMMMMNmdyssosydmMMMMMMdydMMMMMMMMMMMMdyhMMMMNmdhysosyhmNMMMMMMMMMMMMMMMMMMMMMM
-MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM"${blanco}
+figlet Shadow SMS
 }
 
 #SOLICITANDO
 
 InputData(){
 	ShadowSMS
-echo -e -n "${negro}
+echo -e -n "
+
 ┌-------------------┐
-█ ${blanco}NÚMERO TELEFÓNICO ${negro}█
+| NÚMERO TELEFÓNICO |
 └-------------------┘
+
 ┃
-└->>> "${verde}
+└->>> "
 	read -r NUMBER
 	sleep 0.5
-echo -e -n "${negro}
+echo -e -n "
 ┌------------------┐
-█ ${blanco}MENSAJE A ENVIAR ${negro}█
+| MENSAJE A ENVIAR |
 └------------------┘
 ┃
-└->>> "${verde}
+└->>> "
 	read -r SMS
 	curl -X POST https://textbelt.com/text --data-urlencode phone="${NUMBER}" --data-urlencode message="${SMS}" -d key=textbelt > /dev/null 2>&1
 	if [[ $(echo $?) == "0" ]]; then
-echo -e "${negro}
+echo -e "
 ┌-----------------┐
-█ ${verde}MENSAJE ENVIADO ${negro}█
+| MENSAJE ENVIADO |
 └-----------------┘
-"${blanco}
+"
 	else
-echo -e "${negro}
+echo -e "
 ┌--------------------┐
-█ ${rojo}MENSAJE NO ENVIADO ${negro}█
+| MENSAJE NO ENVIADO |
 └--------------------┘
-"${blanco}
+"
 	fi
 }
 
