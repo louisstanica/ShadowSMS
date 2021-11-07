@@ -1,4 +1,12 @@
 # ShadowSMS
-This is a small bash script that I have written today that allows us to send SMS to any number anonymously, it uses the "textbalt" API that allows us to send a free SMS per day, it is 100% anonymous and if we use a router to direct our traffic through tor, the use of the person who wants to use this tool will be totally undetectable.
+Shadow SMS is a small bash script that using the API -textbalt- allows us to send SMS to any phone number in any country anonymously and totally untraceable.
+The use of a TOR router is recommended to secure 100% outbound traffic, although it is not necessary.
 
-Valid both for desktop linux environment and for Termux without root.
+TextBalt allows us to send a totally free daily message, in case we want to send more through its website we can acquire more messages and enter our key in the script.
+
+I have developed this tool with an educational nature, I am not responsible for any possible misuse that it may be given.
+
+Textbalt website -> https://textbelt.com/
+
+This tool can be used both in a Linux desktop environment and in Termux (Android).
+
